@@ -1,8 +1,9 @@
 import "./Address"
+import "./user.css"
 import {Address} from "./Address";
 
-export function User(props) {
-    let {id, name, username, email, street, suite, city, zipcode, lat, lng} = props;
+export function User (props) {
+    let {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website} = props;
     return (
       <div className={'user'}>
           <h3>{id}</h3>
@@ -16,6 +17,8 @@ export function User(props) {
                    lat={lat}
                    lng={lng}
           />
+          <h3>phone : {phone}</h3>
+          <h3>website : {website}</h3>
       </div>
     );
 }

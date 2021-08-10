@@ -1,5 +1,5 @@
 import {Geo} from "./Geo";
-import "./address.css"
+import "./address.css";
 
 export function Address (props) {
     let {street, suite, city, zipcode, lat, lng} = props;

@@ -1,9 +1,10 @@
-import "./Address"
-import "./user.css"
+import "./Address";
+import "./user.css";
 import {Address} from "./Address";
+import {Company} from "./Company";
 
 export function User (props) {
-    let {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website} = props;
+    let {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, nameCompany, catchPhrase, bs} = props;
     return (
       <div className={'user'}>
           <h3>{id}</h3>
@@ -19,6 +20,10 @@ export function User (props) {
           />
           <h3>phone : {phone}</h3>
           <h3>website : {website}</h3>
+          <Company nameCompany={nameCompany}
+                   catchPhrase={catchPhrase}
+                   bs={bs}
+          />
       </div>
     );
 }
